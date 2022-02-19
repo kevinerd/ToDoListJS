@@ -28,21 +28,21 @@
         <div class="contenedor">
             <h1>Formulario de carga</h1>
             <div class="mb-3">
-                <label for="add" class="form-label">Agregar Item</label>
-                <input type="text" class="form-control" id="formTitulo" placeholder="Item a agregar...">
+                <label for="formItem" class="form-label">Agregar Item</label>
+                <input type="text" class="form-control" id="formItem" placeholder="Item a agregar...">
             </div>
-
-            <select class="form-select" aria-label="Default select example" id="formCategoria">
-                <option selected>Elige la Categoría...</option>
-                <option value="frutas.png">Frutas</option>
-                <option value="verduras.png">Verduras</option>
-                <option value="lacteos.png">Lácteos</option>
-                <option value="carnes.png">Carnes</option>
-                <option value="ropa.png">Ropa</option>
-                <option value="electronica.png">Electrónica</option>
-                <option value="farmacia.png">Farmacia</option>
-            </select>
-
+            <div class="mb-3">
+                <select class="form-select" aria-label="Seleccionar Categoria" id="formCategoria">
+                    <option selected>Categoría...</option>
+                    <option value="frutas.png">Frutas</option>
+                    <option value="verduras.png">Verduras</option>
+                    <option value="lacteos.png">Lácteos</option>
+                    <option value="carnes.png">Carnes</option>
+                    <option value="ropa.png">Ropa</option>
+                    <option value="electronica.png">Electrónica</option>
+                    <option value="farmacia.png">Farmacia</option>
+                </select>
+            </div>
             <div class="mb-3">
                 <label for="formNotas" class="form-label">Notas</label>
                 <textarea class="form-control" id="formNotas" rows="3"></textarea>
@@ -56,23 +56,23 @@
         <div class="contenedor">
             <h1>Listado</h1>
 
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <img src="images/carnes.png" alt="">
-                    <p>Chorizo Colorado</p>
-                    <button onclick="mostrarDetalle()">
-                        <img src="images/flecha.png" alt="">
-                    </button>
-                </li>
+            <ul class="list-group" id="listado">
+                
             </ul>
         </div>
+        <button id="agregarItemListado" class="fav">
+            <span>+</span>
+        </button>
     </section>
 
     <section id="pantallaDetalle">
+        <button id="cerrarDetalle">
+            <span>X</span>
+        </button>
         <div class="contenedor">
-            <img src="./images/carnes.png">
-            <h1>Chorizo Colorado</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore similique esse laboriosam. Suscipit, molestiae. Laborum qui, excepturi debitis sit hic amet est dolor corrupti asperiores nemo, deleniti adipisci, quibusdam beatae?</p>
+            <img src="./images/carnes.png" id="imgDetalle">
+            <h1 id="tituloDetalle"></h1>
+            <p id="notasDetalle"></p>
         </div>
     </section>
     
